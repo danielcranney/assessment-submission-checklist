@@ -1,9 +1,63 @@
+@import url("https://use.typekit.net/ntr0cni.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply antialiased;
+  }
   body {
-    @apply bg-slate-100;
+    @apply bg-[#231e32] flex items-center justify-center w-full font-body;
+  }
+}
+
+/**********************/
+/*     Typography     */
+/**********************/
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold font-body tracking-tight mb-2
+    transition-all duration-150 ease-in-out dark:text-white text-neutral-700;
+  }
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-lg;
+  }
+  h6 {
+    @apply text-sm;
+  }
+  p {
+    @apply mb-4 font-medium
+    text-white/80 transition-all duration-150 ease-in-out;
+  }
+
+  li {
+    @apply dark:text-neutral-300 text-neutral-600 transition-all duration-150 ease-in-out;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply appearance-none px-2.5 h-10 flex items-center flex-1 rounded-md
+    text-sm font-bold border-2 hover:border-2 focus:border-2 outline-none border-[#231e32]
+   transition-all duration-150 ease-in-out;
   }
 }
